@@ -1,93 +1,94 @@
+Tushunarli! Topshiriq shartlarini toʻliq bajarish va kodni toza ajratish uchun bizga 2 ta fayl (index.html va style.css) kerak boʻladi.
+
+Quyidagi kodlarni nusxalab, oʻz loyihangizga qoʻshishingiz mumkin:
+
+1. index.html fayli
+HTML
 <!DOCTYPE html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
-    <title>Mening birinchi HTML sahifam</title>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 xil usulda CSS bog'lash</title>
 
-    <h1>Bu asosiy sarlavha (h1)</h1>
-    <h2>Bu ikkinchi darajali sarlavha (h2)</h2>
+    <link rel="stylesheet" href="style.css">
 
-    <p>Bu oddiy matn bloki. Bu yerda darsda o'rgatilgan asosiy teglarni mashq qilish mumkin.</p>
-
-    <h3>Kunning muhim rejalari:</h3>
-    <ul>
-        <li>HTML teglarini o'rganish</li>
-        <li>GitHub-ga fayllarni to'g'ri yuklashni mashq qilish</li>
-        <li>Veb-sahifa yaratish</li>
-    </ul>
-
-    <a href="https://github.com" target="_blank">GitHub saytiga o'tish</a>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <title>HTML va CSS darsi</title>
-    
     <style>
         body {
-            background-color: #f4f6f9; /* Orqa fon rangi */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 40px;
-            text-align: center;
+            background-color: #f0f4f8; /* background property */
+            margin: 0; /* margin property */
+            font-family: sans-serif;
         }
 
         .konteyner {
-            background-color: white;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Soya berish */
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px; /* padding property */
+            background: white;
+            border-radius: 8px;
         }
 
-        h1 {
-            color: #2c3e50;
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #5a6c7d;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        .tugma {
-            background-color: #2ecc71; /* Yashil rang */
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            transition: 0.3s; /* Rang silliq o'zgarishi uchun */
-        }
-
-        /* Sichqoncha tugma ustiga kelganda */
-        .tugma:hover {
-            background-color: #27ae60; 
-            transform: scale(1.05); /* Biroz kattalashadi */
+        .tavsif-matn {
+            font-size: 16px; /* font-size property */
+            color: #555555; /* color property */
         }
     </style>
 </head>
 <body>
 
     <div class="konteyner">
-        <h1>2-dars: HTML Teglar va CSS stillar</h1>
-        <p>
-            Ushbu sahifa toza HTML teglari yordamida yozildi va CSS kodlari bilan 
-            chiroyli ko'rinishga keltirildi. Endi GitHub'da faqat README emas, 
-            haqiqiy kod fayli mavjud!
+        <h1 style="color: #ff5722; font-size: 36px;">Bu loyihaning asosiy sarlavhasi (Hero text)</h1>
+        
+        <p class="tavsif-matn">
+            Ushbu matn ko'rinishi head qismidagi style tegi orqali boshqarilmoqda.
         </p>
-        <button class="tugma">Kodni tekshirish</button>
+
+        <div class="karta">
+            <h3>Tashqi CSS yordamida bezatilgan blok</h3>
+            <p>Bu blokning ko'rinishi butunlay style.css fayliga bog'liq.</p>
+        </div>
     </div>
 
 </body>
 </html>
+2. style.css fayli
+Ushbu kodni style.css deb nomlangan alohida faylga saqlang (index.html bilan bir xil papkada boʻlishi kerak):
+
+CSS
+/* Tashqi CSS fayli */
+.karta {
+    background-color: #e3f2fd;
+    padding: 15px;
+    margin-top: 20px;
+    border-left: 5px solid #2196f3;
+    border-radius: 4px;
+}
+
+.karta h3 {
+    color: #0d47a1;
+    margin: 0 0 10px 0;
+}
+3. README.md fayli uchun matn
+GitHub'dagi README.md faylingiz ichiga quyidagi tushuntirishni joylashtiring. Bu har bir usulning qachon foydali ekanligini koʻrsatib beradi:
+
+Markdown
+# CSS-ni ulashning 3 xil usuli va ularning qo'llanilishi
+
+Ushbu loyihada CSS stillarini ulashning barcha 3 ta usuli amalda ko'rsatilgan:
+
+### 1. Inline Style ( some element ichida yozish )
+* **Qachon yaxshi:** Faqat bitta elementga tezda, vaqtincha yoki unikal stil bermoqchi bo'lganda (masalan, sahifadagi bitta asosiy Hero matn rangini o'zgartirishda).
+* **Kamchiligi:** Kod ko'payib ketsa, HTML chalkashib ketadi va boshqa joyda qayta ishlatib bo'lmaydi.
+
+### 2. Internal Style (<head> ichida <style> tegi bilan)
+* **Qachon yaxshi:** Faqat bitta sahifadan iborat kichik saytlar (Landing page) yaratilayotganda. Shu sahifaning o'ziga xos stillarini bir joyda saqlash uchun qulay.
+* **Kamchiligi:** Saytda sahifalar ko'paysa, har bir sahifaga kodni qayta ko'chirib chiqish kerak bo'ladi.
+
+### 3. External Style (Alohida .css fayl orqali)
+* **Qachon yaxshi:** Eng to'g'ri va professional usul. Ko'p sahifali katta loyihalarda bitta CSS fayli orqali butun sayt dizaynini boshqarish imkonini beradi. HTML va CSS kodlari bir-biridan mustaqil ajralib turadi.
+🚀 GitHub'ga yuklash tartibi:
+Repozitoriyangizda index.html va style.css fayllarini yarating va yuqoridagi kodlarni soling.
+
+README.md faylini ochib, tushuntirish matnini qo'shing.
+
+Hammasini Commit qiling.
