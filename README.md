@@ -1,31 +1,93 @@
-# python-dunyosi
-Tanlov va Kelajak Rejasi: Nima uchun aynan Python?
-Dasturlash olamida tillar xilma-xil bo'lsa-da, mening maqsadlarim va qiziqishlarimga eng mos keladigan yo'nalish bu — Sun'iy Intellekt (AI) va Backend sohasi bo'ldi. Bu sohaning yetakchisi esa, shubhasiz, Python dasturlash tilidir. Ushbu hujjatda nima uchun aynan Python tilini tanlaganim, uning imkoniyatlari va yaqin 6 oy ichidagi maqsadlarim haqida so'z yuritaman.
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Mening birinchi HTML sahifam</title>
+</head>
+<body>
 
-Python tilini tanlashimning 3 ta asosiy sababi
-Sun'iy Intellekt va Machine Learning ekotizimi:
-Python bugungi kunda sun'iy intellekt va ma'lumotlar tahlili (Data Science) sohasida mutloq yetakchi hisoblanadi. Unda TensorFlow, PyTorch va Scikit-learn kabi dunyodagi eng kuchli AI kutubxonalari yaratilgan. Boshqa tillarda AI modellarini qurish juda murakkab va ko'p vaqt talab qiladi, Pythonda esa bu jarayon ancha optimallashgan.
+    <h1>Bu asosiy sarlavha (h1)</h1>
+    <h2>Bu ikkinchi darajali sarlavha (h2)</h2>
 
-Sodda sintaksis va tezkor rivojlanish:
-Python tili ingliz tiliga juda yaqin va tushunish uchun qulay. Dasturchi kod sintaksisidagi mayda xatoliklar (masalan, nuqtali vergul qolib ketishi) haqida qayg'urmasdan, asosiy e'tiborini muammoning mantiqiy yechimiga (algoritmga) qaratishi mumkin. Bu esa loyihalarni tezroq yaratishga (MVP) imkon beradi.
+    <p>Bu oddiy matn bloki. Bu yerda darsda o'rgatilgan asosiy teglarni mashq qilish mumkin.</p>
 
-Backend va Keng qamrovlilik:
-Python faqat AI bilan cheklanmaydi. Django va FastAPI freymvorklari yordamida har qanday yuklamaga bardosh bera oladigan kuchli backend tizimlarini qurish mumkin. Bu esa menga ham aqlli neyron tarmoqlar yaratish, ham ularni veb-tizimlarga integratsiya qilish imkonini beradi.
+    <h3>Kunning muhim rejalari:</h3>
+    <ul>
+        <li>HTML teglarini o'rganish</li>
+        <li>GitHub-ga fayllarni to'g'ri yuklashni mashq qilish</li>
+        <li>Veb-sahifa yaratish</li>
+    </ul>
 
-Men qurmoqchi bo'lgan loyiha: "SmartEdu" platformasi
-Mening kelajakdagi maqsadim — sun'iy intellekt bilan integratsiya qilingan "SmartEdu" deb nomlangan onlayn ta'lim backend platformasini yaratishdir.
+    <a href="https://github.com" target="_blank">GitHub saytiga o'tish</a>
 
-Loyiha mantiqi: Tizimga o'quvchi kradi va test topshiradi. AI neyron tarmog'i o'quvchining xatolarini tahlil qilib, uning kuchsiz tomonlarini aniqlaydi.
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML va CSS darsi</title>
+    
+    <style>
+        body {
+            background-color: #f4f6f9; /* Orqa fon rangi */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+        }
 
-Vazifasi: Masalan, o'quvchi matematikadan foizlarga oid misollarda qiynalsa, tizimning backend qismi buni aniqlab, unga avtomatik ravishda aynan foiz mavzusidagi darslar va yangi mashqlarni tavsiya qiladi. Ya'ni har bir o'quvchi uchun individual ta'lim rejasi shakllantiriladi. Bu loyihaning backend va AI qismini to'liq Pythonda qurishni rejalashtirganman.
+        .konteyner {
+            background-color: white;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Soya berish */
+        }
 
-6 oydan keyingi maqsadlarim
-Bugundan boshlab keyingi 6 oy uchun aniq rejam quyidagicha:
+        h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
 
-1-2-oy: Python asoslari, OOP (Obyektga yo'naltirilgan dasturlash) va ma'lumotlar tuzilmalarini mukammal o'rganish.
+        p {
+            color: #5a6c7d;
+            font-size: 16px;
+            line-height: 1.6;
+        }
 
-3-4-oy: SQL ma'lumotlar bazasi va Django/FastAPI freymvorklari yordamida murakkab veb-APIlar yozishni o'zlashtirish.
+        .tugma {
+            background-color: #2ecc71; /* Yashil rang */
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s; /* Rang silliq o'zgarishi uchun */
+        }
 
-5-6-oy: NumPy, Pandas va Scikit-learn kutubxonalari orqali boshlang'ich Sun'iy intellekt modellarini yaratish va ularni "SmartEdu" loyihamning backend qismiga bog'lash.
+        /* Sichqoncha tugma ustiga kelganda */
+        .tugma:hover {
+            background-color: #27ae60; 
+            transform: scale(1.05); /* Biroz kattalashadi */
+        }
+    </style>
+</head>
+<body>
 
-Yakuniy maqsad: 6 oydan so'ng, Python bo'yicha kuchli Junior Backend / AI muhandisi darajasiga yetish va dastlabki shaxsiy loyihamning prototipini Github portfoliomga joylash.
+    <div class="konteyner">
+        <h1>2-dars: HTML Teglar va CSS stillar</h1>
+        <p>
+            Ushbu sahifa toza HTML teglari yordamida yozildi va CSS kodlari bilan 
+            chiroyli ko'rinishga keltirildi. Endi GitHub'da faqat README emas, 
+            haqiqiy kod fayli mavjud!
+        </p>
+        <button class="tugma">Kodni tekshirish</button>
+    </div>
+
+</body>
+</html>
